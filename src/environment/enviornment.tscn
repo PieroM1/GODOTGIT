@@ -7,8 +7,10 @@
 [node name="enviornment" type="Node2D"]
 
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_right = 1920.0
-offset_bottom = 1080.0
+offset_left = -1118.0
+offset_top = -725.0
+offset_right = 3202.0
+offset_bottom = 1918.0
 color = Color(0.0431373, 0.0470588, 0.12549, 1)
 
 [node name="borders" parent="." instance=ExtResource("1_k0ddd")]

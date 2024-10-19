@@ -70,5 +70,4 @@ animations = [{
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_6nsxg")
 animation = &"existir"
-frame = 7
-frame_progress = 0.314319
+frame_progress = 0.0590014
