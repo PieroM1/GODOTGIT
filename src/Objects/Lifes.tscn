@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=3 uid="uid://disdbk1cjcwv5"]
+
+[ext_resource type="Texture2D" uid="uid://cao7bmh883ckl" path="res://assets/art/Health/health.png" id="1_0ohhd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8bs37"]
+atlas = ExtResource("1_0ohhd")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v1frk"]
+atlas = ExtResource("1_0ohhd")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8t1np"]
+atlas = ExtResource("1_0ohhd")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hprim"]
+atlas = ExtResource("1_0ohhd")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_841oo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8bs37")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v1frk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8t1np")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hprim")
+}],
+"loop": true,
+"name": &"existir",
+"speed": 4.0
+}]
+
+[node name="Life" type="Node2D" groups=["gr_lifes"]]
+
+[node name="ani_spr_life" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(1.89063, 1.8125)
+sprite_frames = SubResource("SpriteFrames_841oo")
+animation = &"existir"
+frame_progress = 0.489721
