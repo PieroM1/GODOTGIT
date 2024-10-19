@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://djso8as1hbngn"]
 
-[ext_resource type="Script" path="res://src/Objects/stages_lifes.gd" id="1_ptsku"]
-[ext_resource type="PackedScene" uid="uid://disdbk1cjcwv5" path="res://src/Objects/Lifes.tscn" id="2_c1d5y"]
+[ext_resource type="Script" path="res://src/environment/stages_lifes.gd" id="1_ptsku"]
+[ext_resource type="PackedScene" uid="uid://disdbk1cjcwv5" path="res://src/environment/Lifes.tscn" id="2_c1d5y"]
 
 [node name="stages_lifes" type="Node2D"]
 script = ExtResource("1_ptsku")

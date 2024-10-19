@@ -1,0 +1,74 @@
+[gd_scene load_steps=11 format=3 uid="uid://dgh6l8775lvka"]
+
+[ext_resource type="Texture2D" uid="uid://dy0yp62crbd4" path="res://assets/art/Background/Star.png" id="1_hmsnc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gapjx"]
+atlas = ExtResource("1_hmsnc")
+region = Rect2(0, 0, 38, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4asy6"]
+atlas = ExtResource("1_hmsnc")
+region = Rect2(38, 0, 38, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mg7aa"]
+atlas = ExtResource("1_hmsnc")
+region = Rect2(76, 0, 38, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h3pty"]
+atlas = ExtResource("1_hmsnc")
+region = Rect2(114, 0, 38, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hatlw"]
+atlas = ExtResource("1_hmsnc")
+region = Rect2(152, 0, 38, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vb875"]
+atlas = ExtResource("1_hmsnc")
+region = Rect2(190, 0, 38, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_78fs5"]
+atlas = ExtResource("1_hmsnc")
+region = Rect2(228, 0, 38, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0yeg3"]
+atlas = ExtResource("1_hmsnc")
+region = Rect2(266, 0, 38, 36)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6nsxg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gapjx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4asy6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mg7aa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h3pty")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hatlw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vb875")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_78fs5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0yeg3")
+}],
+"loop": true,
+"name": &"existir",
+"speed": 8.0
+}]
+
+[node name="star" type="AnimatedSprite2D" groups=["gr_stars"]]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_6nsxg")
+animation = &"existir"
+frame = 7
+frame_progress = 0.314319

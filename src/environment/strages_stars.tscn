@@ -1,0 +1,78 @@
+[gd_scene load_steps=3 format=3 uid="uid://b2c1wbtygot6a"]
+
+[ext_resource type="Script" path="res://src/environment/strages_stars.gd" id="1_88a0a"]
+[ext_resource type="PackedScene" uid="uid://dgh6l8775lvka" path="res://src/environment/star.tscn" id="1_q0onf"]
+
+[node name="strages_stars" type="Node2D"]
+script = ExtResource("1_88a0a")
+
+[node name="star" parent="." instance=ExtResource("1_q0onf")]
+position = Vector2(679, 703)
+frame_progress = 0.555201
+
+[node name="star21" parent="." instance=ExtResource("1_q0onf")]
+position = Vector2(1372, 945)
+
+[node name="star22" parent="." instance=ExtResource("1_q0onf")]
+position = Vector2(830, 952)
+
+[node name="star23" parent="." instance=ExtResource("1_q0onf")]
+position = Vector2(942, 679)
+
+[node name="star2" parent="." instance=ExtResource("1_q0onf")]
+position = Vector2(1467, 481)
+
+[node name="star3" parent="." instance=ExtResource("1_q0onf")]
+position = Vector2(794, 474)
+
+[node name="star4" parent="." instance=ExtResource("1_q0onf")]
+position = Vector2(1174, 360)
+
+[node name="star5" parent="." instance=ExtResource("1_q0onf")]
+position = Vector2(636, 202)
+
+[node name="star6" parent="." instance=ExtResource("1_q0onf")]
+position = Vector2(1090, 138)
+
+[node name="star7" parent="." instance=ExtResource("1_q0onf")]
+position = Vector2(185, 383)
+
+[node name="star8" parent="." instance=ExtResource("1_q0onf")]
+position = Vector2(1194, 683)
+
+[node name="star9" parent="." instance=ExtResource("1_q0onf")]
+position = Vector2(1312, 141)
+
+[node name="star10" parent="." instance=ExtResource("1_q0onf")]
+position = Vector2(1759, 225)
+
+[node name="star11" parent="." instance=ExtResource("1_q0onf")]
+position = Vector2(343, 94)
+
+[node name="star12" parent="." instance=ExtResource("1_q0onf")]
+position = Vector2(158, 780)
+
+[node name="star13" parent="." instance=ExtResource("1_q0onf")]
+position = Vector2(1581, 740)
+
+[node name="star14" parent="." instance=ExtResource("1_q0onf")]
+position = Vector2(1776, 979)
+
+[node name="star15" parent="." instance=ExtResource("1_q0onf")]
+position = Vector2(363, 986)
+
+[node name="star16" parent="." instance=ExtResource("1_q0onf")]
+position = Vector2(57, 1036)
+
+[node name="star17" parent="." instance=ExtResource("1_q0onf")]
+position = Vector2(1850, 64)
+
+[node name="star18" parent="." instance=ExtResource("1_q0onf")]
+position = Vector2(424, 568)
+
+[node name="star19" parent="." instance=ExtResource("1_q0onf")]
+position = Vector2(1759, 501)
+
+[node name="star20" parent="." instance=ExtResource("1_q0onf")]
+position = Vector2(101, 54)
+frame_progress = 0.715291
