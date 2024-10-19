@@ -16,8 +16,14 @@ config/icon="res://icon.svg"
 
 [display]
 
-window/size/viewport_width=1277
-window/size/viewport_height=860
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+
+[importer_defaults]
+
+animation_library={
+"animation/fps": 60.0
+}
 
 [input]
 
