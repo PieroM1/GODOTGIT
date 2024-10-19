@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cao7bmh883ckl"
-path="res://.godot/imported/health.png-8bc2bcea5f26085fe43b370bca4df803.ctex"
+uid="uid://dy0yp62crbd4"
+path="res://.godot/imported/Star.png-d6ab36d4b27e1cb2e151f7c08568638a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/Health/health.png"
-dest_files=["res://.godot/imported/health.png-8bc2bcea5f26085fe43b370bca4df803.ctex"]
+source_file="res://assets/art/Background/Star.png"
+dest_files=["res://.godot/imported/Star.png-d6ab36d4b27e1cb2e151f7c08568638a.ctex"]
 
 [params]
 
@@ -24,7 +24,7 @@ compress/channel_pack=0
 mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
-roughness/src_normal="res://assets/art/Health/health.png"
+roughness/src_normal=""
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false
