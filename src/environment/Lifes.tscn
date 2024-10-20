@@ -1,6 +1,7 @@
-[gd_scene load_steps=17 format=3 uid="uid://disdbk1cjcwv5"]
+[gd_scene load_steps=18 format=3 uid="uid://disdbk1cjcwv5"]
 
 [ext_resource type="Texture2D" uid="uid://cao7bmh883ckl" path="res://assets/art/Health/health.png" id="1_0ohhd"]
+[ext_resource type="Script" path="res://src/environment/Lifes.gd" id="1_aby64"]
 [ext_resource type="Texture2D" uid="uid://7s4takjjftqo" path="res://assets/art/Health/lose_life.png" id="2_hmh1l"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8bs37"]
@@ -108,6 +109,7 @@ animations = [{
 }]
 
 [node name="Life" type="Node2D" groups=["gr_lifes"]]
+script = ExtResource("1_aby64")
 
 [node name="ani_spr_life" type="AnimatedSprite2D" parent="."]
 texture_filter = 1

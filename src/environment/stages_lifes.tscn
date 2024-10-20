@@ -12,8 +12,8 @@ position = Vector2(57, 52)
 
 [node name="Life2" parent="." instance=ExtResource("2_c1d5y")]
 texture_filter = 1
-position = Vector2(269, 53)
+position = Vector2(164, 53)
 
 [node name="Life3" parent="." instance=ExtResource("2_c1d5y")]
 texture_filter = 1
-position = Vector2(164, 53)
+position = Vector2(269, 53)
