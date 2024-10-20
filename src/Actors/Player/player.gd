@@ -89,3 +89,6 @@ func play_dead():
 
 func _on_invulnerabilidad_timeout():
 	invulnerabilidad = false
+
+func get_life():
+	return life
