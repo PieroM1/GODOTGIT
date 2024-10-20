@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://djso8as1hbngn"]
+[gd_scene load_steps=4 format=3 uid="uid://djso8as1hbngn"]
 
 [ext_resource type="Script" path="res://src/environment/stages_lifes.gd" id="1_ptsku"]
 [ext_resource type="PackedScene" uid="uid://disdbk1cjcwv5" path="res://src/environment/Lifes.tscn" id="2_c1d5y"]
+[ext_resource type="AudioStream" uid="uid://bgkb2bkr42r11" path="res://assets/audio/Music/La Choza de Crazy Witch.ogg" id="3_im0vc"]
 
 [node name="stages_lifes" type="Node2D"]
 script = ExtResource("1_ptsku")
@@ -17,3 +18,8 @@ position = Vector2(269, 53)
 [node name="Life3" parent="." instance=ExtResource("2_c1d5y")]
 texture_filter = 1
 position = Vector2(164, 53)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(631, 378)
+stream = ExtResource("3_im0vc")
+autoplay = true

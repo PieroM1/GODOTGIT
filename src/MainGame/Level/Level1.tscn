@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://b6e4ycx3gm6nc"]
+
+[ext_resource type="PackedScene" uid="uid://d2thfci5jthhr" path="res://src/environment/enviornment.tscn" id="1_y7j83"]
+[ext_resource type="PackedScene" uid="uid://cko5nv8sn2nu7" path="res://src/objects/rain.tscn" id="2_y2ps4"]
+[ext_resource type="PackedScene" uid="uid://bupxjrqc6ogql" path="res://src/Actors/Player/player.tscn" id="3_hywrj"]
+[ext_resource type="Script" path="res://src/environment/Camera2D2.gd" id="4_qclss"]
+[ext_resource type="PackedScene" uid="uid://djso8as1hbngn" path="res://src/environment/stages_lifes.tscn" id="5_gbvov"]
+
+[node name="Level1" type="Node2D"]
+
+[node name="enviornment" parent="." instance=ExtResource("1_y7j83")]
+
+[node name="Rain" parent="." instance=ExtResource("2_y2ps4")]
+
+[node name="Player" parent="." instance=ExtResource("3_hywrj")]
+position = Vector2(2263, 1269)
+
+[node name="Camera2D2" type="Camera2D" parent="."]
+position = Vector2(2265, 1283)
+scale = Vector2(4.78328, 2.38323)
+limit_left = 0
+limit_top = 0
+limit_right = 4395
+limit_bottom = 2585
+editor_draw_limits = true
+script = ExtResource("4_qclss")
+
+[node name="stages_lifes" parent="Camera2D2" instance=ExtResource("5_gbvov")]
+position = Vector2(-133.172, -177.49)
+scale = Vector2(0.209062, 0.419599)

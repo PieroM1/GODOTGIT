@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bgkb2bkr42r11"
+path="res://.godot/imported/La Choza de Crazy Witch.ogg-6e0e0dde654600add65d6b07656e309a.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/audio/Music/La Choza de Crazy Witch.ogg"
+dest_files=["res://.godot/imported/La Choza de Crazy Witch.ogg-6e0e0dde654600add65d6b07656e309a.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

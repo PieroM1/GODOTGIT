@@ -7,6 +7,14 @@ extends CharacterBody2D
 var canShoot: bool = true
 var life: int = 3
 
+var invulnerabilidad:bool = false
+
+func _ready():
+	add_to_group("player")
+	$animation_damage.connect("animation_finished", Callable(self, "_on_animation_finished"))
+	$Area2D.connect("area_entered", Callable(self, "_on_body_entered"))
+	$animation_damage.play("full_sprite")
+
 func _physics_process(delta):
 	velocity = Vector2.ZERO
 	if Input.is_action_pressed("derecha"):
@@ -41,29 +49,43 @@ func shoot(delta):
 func _on_timer_timeout():
 	canShoot = true
 
-func _on_body_entered(body):
-	take_damage(1)
-
-func take_damage(amount):
-	life -= amount
-	if life <= 0:
-		die()
-	else:
-		update_animation()
-
-func update_animation():
-	if life == 2:
-		$AnimatedSprite2D.play("mid_life")
-	elif life == 1:
-		$AnimatedSprite2D.play("low_life")
-	update_sprite()
-
-func update_sprite():
-	if life == 2:
-		$Sprite2D.texture = preload("res://assets/art/Player/PlayerLifeMid.png")
-	elif life == 1:
-		$Sprite2D.texture = preload("res://assets/art/Player/PlayerLifeLow.png")
-
 func die():
-	queue_free()
-	# Aquí puedes añadir lógica adicional para manejar la muerte del jugador, como reiniciar el nivel o mostrar una pantalla de game over.
+	print("TE Moriste ")
+
+func _on_body_entered(area): 
+	if area.is_in_group("asteroides") and invulnerabilidad == false:
+		match life:
+			3:
+				await play_mid_life()  # Espera a que termine la animación
+				life = life-1
+				invulnerabilidad = true
+				$Invulnerabilidad.start()
+			2:
+				await play_low_life()
+				life = life-1
+				invulnerabilidad = true
+				$Invulnerabilidad.start()
+			1:
+				life = life-1
+				await play_dead()
+				life = life-1
+				invulnerabilidad = true
+				$Invulnerabilidad.start()
+
+func play_mid_life():
+	$animation_damage.play("mid_life")  # Reproduce la animación de daño
+	await $animation_damage.animation_finished  # Espera a que termine la animación
+	$animation_damage.play("mid_sprite")  # Cambia el sprite después de que termine la animación
+
+func play_low_life():
+	$animation_damage.play("low_life")  # Reproduce la animación de daño
+	await $animation_damage.animation_finished  # Espera a que termine la animación
+	$animation_damage.play("low_sprite")  # Cambia el sprite después de que termine la animación
+
+func play_dead():
+	$animation_damage.play("dead")  # Reproduce la animación de daño
+	await $animation_damage.animation_finished  # Espera a que termine la animación
+	die()  # Llama a la función de muerte
+
+func _on_invulnerabilidad_timeout():
+	invulnerabilidad = false
