@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://bupxjrqc6ogql"]
+[gd_scene load_steps=37 format=3 uid="uid://bupxjrqc6ogql"]
 
 [ext_resource type="Script" path="res://src/Actors/Player/player.gd" id="1_4vibd"]
 [ext_resource type="PackedScene" uid="uid://b21yrsgxmdxlu" path="res://src/Actors/Player/laser_player.tscn" id="2_ffqo7"]
@@ -119,6 +119,10 @@ region = Rect2(0, 256, 128, 128)
 atlas = ExtResource("4_d4ve7")
 region = Rect2(128, 256, 128, 128)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_up1gg"]
+atlas = ExtResource("2_tjv0t")
+region = Rect2(0, 0, 128, 128)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_m5j4e"]
 animations = [{
 "frames": [{
@@ -219,6 +223,14 @@ animations = [{
 "loop": true,
 "name": &"mid_life",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_up1gg")
+}],
+"loop": true,
+"name": &"vivo",
+"speed": 5.0
 }]
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
@@ -232,11 +244,6 @@ metadata/_edit_group_ = true
 rotation = 1.5708
 polygon = PackedVector2Array(0, -43, 14, -6, 22, -6, 22, -23, 32, -8, 32, 7, 41, 20, 32, 29, 15, 14, 0, 20, -15, 12, -31, 29, -41, 20, -32, 7, -32, -10, -24, -23, -23, -6, -13, -6)
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture_filter = 1
-rotation = 1.5708
-texture = ExtResource("2_tjv0t")
-
 [node name="Spawn_Laser" type="Marker2D" parent="."]
 position = Vector2(57, 0)
 
@@ -244,10 +251,10 @@ position = Vector2(57, 0)
 wait_time = 0.4
 
 [node name="animation_damage" type="AnimatedSprite2D" parent="."]
-visible = false
 position = Vector2(-2, 0)
 rotation = 1.5708
 sprite_frames = SubResource("SpriteFrames_m5j4e")
-animation = &"dead"
+animation = &"vivo"
+frame_progress = 0.85507
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -113,5 +113,4 @@ animations = [{
 texture_filter = 1
 scale = Vector2(1.89063, 1.8125)
 sprite_frames = SubResource("SpriteFrames_841oo")
-animation = &"existir"
-frame_progress = 0.120114
+animation = &"lose_life"

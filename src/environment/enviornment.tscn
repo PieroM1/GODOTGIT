@@ -1,11 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://d2thfci5jthhr"]
+[gd_scene load_steps=3 format=3 uid="uid://d2thfci5jthhr"]
 
 [ext_resource type="PackedScene" uid="uid://d3jute4kgu5u0" path="res://src/environment/borders.tscn" id="1_k0ddd"]
 [ext_resource type="PackedScene" uid="uid://b2c1wbtygot6a" path="res://src/environment/strages_stars.tscn" id="2_fs187"]
-[ext_resource type="PackedScene" uid="uid://djso8as1hbngn" path="res://src/environment/stages_lifes.tscn" id="3_jv2ym"]
-[ext_resource type="Script" path="res://src/environment/Camera2D2.gd" id="4_qsnty"]
-[ext_resource type="PackedScene" uid="uid://bupxjrqc6ogql" path="res://src/Actors/Player/player.tscn" id="4_xqx0a"]
-[ext_resource type="PackedScene" uid="uid://cycrf4qhpis6i" path="res://src/Actors/Enemy/enemy.tscn" id="6_cu6bi"]
 
 [node name="enviornment" type="Node2D"]
 
@@ -19,18 +15,3 @@ color = Color(0.0431373, 0.0470588, 0.12549, 1)
 [node name="borders" parent="." instance=ExtResource("1_k0ddd")]
 
 [node name="strages_stars" parent="." instance=ExtResource("2_fs187")]
-
-[node name="Player" parent="." instance=ExtResource("4_xqx0a")]
-
-[node name="Camera2D2" type="Camera2D" parent="."]
-position = Vector2(633, 432)
-scale = Vector2(4.78328, 2.38323)
-script = ExtResource("4_qsnty")
-
-[node name="stages_lifes" parent="Camera2D2" instance=ExtResource("3_jv2ym")]
-position = Vector2(-133.172, -177.49)
-scale = Vector2(0.209062, 0.419599)
-
-[node name="Enemy" parent="." instance=ExtResource("6_cu6bi")]
-position = Vector2(845, 446)
-scale = Vector2(2.48421, 2.43714)
