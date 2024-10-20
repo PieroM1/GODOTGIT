@@ -1,40 +1,40 @@
 [gd_scene load_steps=5 format=3 uid="uid://d3jute4kgu5u0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hla6y"]
-size = Vector2(0.2, 27)
+size = Vector2(0.2, 65)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_envta"]
-size = Vector2(8, 1080)
+size = Vector2(8, 2600)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_63rtw"]
-size = Vector2(1920, 8)
+size = Vector2(4400, 8)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kebq8"]
-size = Vector2(1920, 8)
+size = Vector2(4400, 8)
 
 [node name="borders" type="Node2D"]
 
 [node name="bord_lef" type="StaticBody2D" parent="."]
 
 [node name="col_bord_left" type="CollisionShape2D" parent="bord_lef"]
-position = Vector2(-4, 540)
+position = Vector2(-4, 1300)
 scale = Vector2(40, 40)
 shape = SubResource("RectangleShape2D_hla6y")
 
 [node name="bord_right" type="StaticBody2D" parent="."]
 
 [node name="col_bord_right" type="CollisionShape2D" parent="bord_right"]
-position = Vector2(1924, 540)
+position = Vector2(4404, 1300)
 shape = SubResource("RectangleShape2D_envta")
 
 [node name="bord_top" type="StaticBody2D" parent="."]
 
 [node name="col_bord_top" type="CollisionShape2D" parent="bord_top"]
-position = Vector2(960, -4)
+position = Vector2(2200, -4)
 shape = SubResource("RectangleShape2D_63rtw")
 
 [node name="bord_bot" type="StaticBody2D" parent="."]
 
 [node name="col_bord_bot" type="CollisionShape2D" parent="bord_bot"]
-position = Vector2(960, 1084)
+position = Vector2(2200, 2604)
 shape = SubResource("RectangleShape2D_kebq8")
