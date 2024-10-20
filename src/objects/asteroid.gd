@@ -6,7 +6,7 @@ var direction: Vector2
 func _ready():
 	add_to_group("asteroides")
 	$spr_asteroid.connect("animation_finished", Callable(self, "_on_animation_finished"))
-
+	$spr_asteroid.play("existir")
 func _process(delta):
 	position += direction * speed * delta  # Mueve el objeto
 	

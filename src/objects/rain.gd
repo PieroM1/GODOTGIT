@@ -1,16 +1,16 @@
 extends Node2D
 
 @export var asteroid_scene: PackedScene  # Asegúrate de asignarlo en el editor de Godot
-var screen_size = Vector2(1920, 1080)
-var speed = 50  # Velocidad ajustada para un movimiento más lento
+var screen_size = Vector2(4400, 2600)
+var speed = 200  # Velocidad ajustada para un movimiento más lento
 var asteroids = []  # Vector para almacenar los asteroides
-var max_asteroids = 10  # Número máximo de asteroides en pantalla
+var max_asteroids = 500  # Número máximo de asteroides en pantalla
 var asteroid_timer: Timer
 
 func _ready():
 	# Crear un temporizador como nodo hijo
 	asteroid_timer = Timer.new()
-	asteroid_timer.wait_time = 2.0
+	asteroid_timer.wait_time = 1.0
 	asteroid_timer.autostart = true
 	asteroid_timer.connect("timeout", Callable(self, "_spawn_asteroid"))
 	add_child(asteroid_timer)

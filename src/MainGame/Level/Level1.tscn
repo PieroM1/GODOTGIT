@@ -13,10 +13,10 @@
 [node name="Rain" parent="." instance=ExtResource("2_y2ps4")]
 
 [node name="Player" parent="." instance=ExtResource("3_hywrj")]
-position = Vector2(631, 436)
+position = Vector2(2263, 1269)
 
 [node name="Camera2D2" type="Camera2D" parent="."]
-position = Vector2(640, 434)
+position = Vector2(2265, 1283)
 scale = Vector2(4.78328, 2.38323)
 limit_left = 0
 limit_top = 0
