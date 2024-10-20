@@ -8,7 +8,6 @@ func _ready():
 	jugador = get_node("/root/enviornment/Player")
 	
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if jugador:

@@ -4,8 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://b2c1wbtygot6a" path="res://src/environment/strages_stars.tscn" id="2_fs187"]
 [ext_resource type="PackedScene" uid="uid://djso8as1hbngn" path="res://src/environment/stages_lifes.tscn" id="3_jv2ym"]
 [ext_resource type="Script" path="res://src/environment/Camera2D2.gd" id="4_qsnty"]
-[ext_resource type="PackedScene" uid="uid://b8xyqoy5orr28" path="res://src/Actors/Player/player.tscn" id="4_xqx0a"]
-[ext_resource type="PackedScene" uid="uid://c517qm4i380kc" path="res://src/Actors/Enemy/enemy.tscn" id="6_cu6bi"]
+[ext_resource type="PackedScene" uid="uid://bupxjrqc6ogql" path="res://src/Actors/Player/player.tscn" id="4_xqx0a"]
+[ext_resource type="PackedScene" uid="uid://cycrf4qhpis6i" path="res://src/Actors/Enemy/enemy.tscn" id="6_cu6bi"]
 
 [node name="enviornment" type="Node2D"]
 
