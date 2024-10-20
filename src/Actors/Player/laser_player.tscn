@@ -1,0 +1,76 @@
+[gd_scene load_steps=11 format=3 uid="uid://cvd3ogimttiik"]
+
+[ext_resource type="Script" path="res://src/Actors/Player/laser_player.gd" id="1_w21mi"]
+[ext_resource type="Texture2D" uid="uid://5y7wyulnnbwi" path="res://assets/art/Player/Laser2.png" id="2_lbftg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v2v0p"]
+atlas = ExtResource("2_lbftg")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vk2fm"]
+atlas = ExtResource("2_lbftg")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sajts"]
+atlas = ExtResource("2_lbftg")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2hufl"]
+atlas = ExtResource("2_lbftg")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3sem0"]
+atlas = ExtResource("2_lbftg")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_184ub"]
+atlas = ExtResource("2_lbftg")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pn0ga"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v2v0p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vk2fm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sajts")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2hufl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3sem0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_184ub")
+}],
+"loop": true,
+"name": &"animation_bullet",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_iwnnl"]
+radius = 8.0
+
+[node name="Laser_player" type="CharacterBody2D" groups=["laser"]]
+script = ExtResource("1_w21mi")
+velocidad = 300
+
+[node name="animacion" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_pn0ga")
+animation = &"animation_bullet"
+frame_progress = 0.111381
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+shape = SubResource("CircleShape2D_iwnnl")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
