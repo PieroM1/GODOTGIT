@@ -3,9 +3,9 @@
 [ext_resource type="Script" path="res://src/Actors/Player/player.gd" id="1_4vibd"]
 [ext_resource type="PackedScene" uid="uid://b21yrsgxmdxlu" path="res://src/Actors/Player/laser_player.tscn" id="2_ffqo7"]
 [ext_resource type="Texture2D" uid="uid://0uhs5x3wnb32" path="res://assets/art/Player/Player.png" id="2_tjv0t"]
-[ext_resource type="Texture2D" path="res://assets/art/Player/MainMidDamage.png" id="4_d4ve7"]
-[ext_resource type="Texture2D" path="res://assets/art/Player/MainDestruction.png" id="4_m2d1t"]
-[ext_resource type="Texture2D" path="res://assets/art/Player/MainDamaged.png" id="5_kv6uq"]
+[ext_resource type="Texture2D" uid="uid://b8aalr1apntxf" path="res://assets/art/Player/MainMidDamage.png" id="4_d4ve7"]
+[ext_resource type="Texture2D" uid="uid://h6b3s0njr8or" path="res://assets/art/Player/MainDestruction.png" id="4_m2d1t"]
+[ext_resource type="Texture2D" uid="uid://6nclnku65tok" path="res://assets/art/Player/MainDamaged.png" id="5_kv6uq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m3g1b"]
 atlas = ExtResource("4_m2d1t")
