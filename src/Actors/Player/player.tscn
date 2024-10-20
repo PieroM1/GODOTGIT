@@ -255,6 +255,5 @@ position = Vector2(-2, 0)
 rotation = 1.5708
 sprite_frames = SubResource("SpriteFrames_m5j4e")
 animation = &"vivo"
-frame_progress = 0.85507
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
