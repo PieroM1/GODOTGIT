@@ -4,6 +4,7 @@ extends Area2D  # Cambiado a Area2D
 var direction: Vector2
 
 func _ready():
+	add_to_group("asteroides")
 	$spr_asteroid.connect("animation_finished", Callable(self, "_on_animation_finished"))
 
 func _process(delta):

@@ -7,6 +7,12 @@ extends CharacterBody2D
 var canShoot: bool = true
 var life: int = 3
 
+var invulnerabilidad:bool = false
+
+func _ready():
+	$animation_damage.connect("animation_finished", Callable(self, "_on_animation_finished"))
+	$Area2D.connect("area_entered", Callable(self, "_on_body_entered"))
+
 func _physics_process(delta):
 	velocity = Vector2.ZERO
 	if Input.is_action_pressed("derecha"):
@@ -42,5 +48,39 @@ func _on_timer_timeout():
 	canShoot = true
 
 func die():
-	queue_free()
-	# Aquí puedes añadir lógica adicional para manejar la muerte del jugador, como reiniciar el nivel o mostrar una pantalla de game over.
+	print("TE Moriste ")
+
+func _on_body_entered(area): 
+	if area.is_in_group("asteroides") and invulnerabilidad == false:
+		match life:
+			3:
+				play_mid_life()
+				life = life-1
+				invulnerabilidad = true
+				$Invulnerabilidad.start()
+			2:
+				play_low_life()
+				life = life-1
+				invulnerabilidad = true
+				$Invulnerabilidad.start()
+			1:
+				life = life-1
+				play_dead()
+				life = life-1
+				invulnerabilidad = true
+				$Invulnerabilidad.start()
+
+func play_mid_life():
+	$animation_damage.play("mid_life")
+	$animation_damage.play("mid_sprite")
+
+func play_low_life():
+	$animation_damage.play("low_life")
+	$animation_damage.play("low_sprite")
+
+func play_dead():
+	$animation_damage.play("dead")
+	die()
+
+func _on_invulnerabilidad_timeout():
+	invulnerabilidad = false

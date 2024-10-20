@@ -7,7 +7,6 @@ var suavizado = 0.010
 func _ready():
 	jugador = get_node("/root/Level1/Player")
 	
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if jugador:
