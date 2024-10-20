@@ -176,7 +176,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"existir",
-"speed": 9.0
+"speed": 4.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -215,15 +215,15 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_oxgtl")
 }],
-"loop": true,
+"loop": false,
 "name": &"explotar",
-"speed": 9.0
+"speed": 4.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lra6o"]
 radius = 43.0465
 
-[node name="asteroid" type="CharacterBody2D"]
+[node name="asteroid" type="Area2D"]
 position = Vector2(-2, -3)
 script = ExtResource("1_n4x7x")
 metadata/_edit_group_ = true
@@ -232,7 +232,6 @@ metadata/_edit_group_ = true
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_nbaqf")
 animation = &"existir"
-frame_progress = 0.957695
 
 [node name="CollisionPolygon2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_lra6o")
