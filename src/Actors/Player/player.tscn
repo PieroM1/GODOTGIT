@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://bupxjrqc6ogql"]
+[gd_scene load_steps=41 format=3 uid="uid://bupxjrqc6ogql"]
 
 [ext_resource type="Script" path="res://src/Actors/Player/player.gd" id="1_4vibd"]
 [ext_resource type="PackedScene" uid="uid://b21yrsgxmdxlu" path="res://src/Actors/Player/laser_player.tscn" id="2_ffqo7"]
@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://b8aalr1apntxf" path="res://assets/art/Player/MainMidDamage.png" id="4_d4ve7"]
 [ext_resource type="Texture2D" uid="uid://h6b3s0njr8or" path="res://assets/art/Player/MainDestruction.png" id="4_m2d1t"]
 [ext_resource type="Texture2D" uid="uid://6nclnku65tok" path="res://assets/art/Player/MainDamaged.png" id="5_kv6uq"]
+[ext_resource type="Texture2D" uid="uid://0pwlhmhudkv4" path="res://assets/art/Player/PlayerLifeLow.png" id="6_ir8kh"]
+[ext_resource type="Texture2D" uid="uid://cyj4vme75i6qq" path="res://assets/art/Player/PlayerLifeMid.png" id="8_2m68v"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m3g1b"]
 atlas = ExtResource("4_m2d1t")
@@ -71,6 +73,10 @@ region = Rect2(256, 384, 128, 128)
 atlas = ExtResource("4_m2d1t")
 region = Rect2(384, 384, 128, 128)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_up1gg"]
+atlas = ExtResource("2_tjv0t")
+region = Rect2(0, 0, 128, 128)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_6bohj"]
 atlas = ExtResource("5_kv6uq")
 region = Rect2(0, 0, 128, 128)
@@ -94,6 +100,10 @@ region = Rect2(0, 256, 128, 128)
 [sub_resource type="AtlasTexture" id="AtlasTexture_bpirt"]
 atlas = ExtResource("5_kv6uq")
 region = Rect2(128, 256, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tlk7e"]
+atlas = ExtResource("6_ir8kh")
+region = Rect2(0, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vt82l"]
 atlas = ExtResource("4_d4ve7")
@@ -119,8 +129,8 @@ region = Rect2(0, 256, 128, 128)
 atlas = ExtResource("4_d4ve7")
 region = Rect2(128, 256, 128, 128)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_up1gg"]
-atlas = ExtResource("2_tjv0t")
+[sub_resource type="AtlasTexture" id="AtlasTexture_nr8id"]
+atlas = ExtResource("8_2m68v")
 region = Rect2(0, 0, 128, 128)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_m5j4e"]
@@ -179,6 +189,14 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_up1gg")
+}],
+"loop": true,
+"name": &"full_sprite",
+"speed": 5.0
+}, {
+"frames": [{
 "duration": 3.4,
 "texture": SubResource("AtlasTexture_6bohj")
 }, {
@@ -199,6 +217,14 @@ animations = [{
 }],
 "loop": true,
 "name": &"low_life",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tlk7e")
+}],
+"loop": true,
+"name": &"low_sprite",
 "speed": 5.0
 }, {
 "frames": [{
@@ -226,10 +252,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_up1gg")
+"texture": SubResource("AtlasTexture_nr8id")
 }],
 "loop": true,
-"name": &"vivo",
+"name": &"mid_sprite",
 "speed": 5.0
 }]
 
@@ -254,6 +280,6 @@ wait_time = 0.4
 position = Vector2(-2, 0)
 rotation = 1.5708
 sprite_frames = SubResource("SpriteFrames_m5j4e")
-animation = &"vivo"
+animation = &"low_sprite"
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

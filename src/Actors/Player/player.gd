@@ -41,29 +41,6 @@ func shoot(delta):
 func _on_timer_timeout():
 	canShoot = true
 
-func _on_body_entered(body):
-	take_damage(1)
-
-func take_damage(amount):
-	life -= amount
-	if life <= 0:
-		die()
-	else:
-		update_animation()
-
-func update_animation():
-	if life == 2:
-		$AnimatedSprite2D.play("mid_life")
-	elif life == 1:
-		$AnimatedSprite2D.play("low_life")
-	update_sprite()
-
-func update_sprite():
-	if life == 2:
-		$Sprite2D.texture = preload("res://assets/art/Player/PlayerLifeMid.png")
-	elif life == 1:
-		$Sprite2D.texture = preload("res://assets/art/Player/PlayerLifeLow.png")
-
 func die():
 	queue_free()
 	# Aquí puedes añadir lógica adicional para manejar la muerte del jugador, como reiniciar el nivel o mostrar una pantalla de game over.

@@ -223,7 +223,7 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_lra6o"]
 radius = 43.0465
 
-[node name="asteroid" type="Area2D"]
+[node name="asteroid" type="Area2D" groups=["damaged_object"]]
 position = Vector2(-2, -3)
 script = ExtResource("1_n4x7x")
 metadata/_edit_group_ = true
