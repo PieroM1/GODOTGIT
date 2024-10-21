@@ -103,7 +103,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_lfh8y")
 }],
-"loop": true,
+"loop": false,
 "name": &"lose_life",
 "speed": 9.0
 }]
@@ -115,4 +115,4 @@ script = ExtResource("1_aby64")
 texture_filter = 1
 scale = Vector2(1.89063, 1.8125)
 sprite_frames = SubResource("SpriteFrames_841oo")
-animation = &"lose_life"
+animation = &"existir"

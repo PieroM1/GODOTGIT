@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 
 window/size/viewport_width=1277
 window/size/viewport_height=860
+window/size/resizable=false
 
 [input]
 
