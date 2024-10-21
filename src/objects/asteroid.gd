@@ -2,8 +2,10 @@ extends Area2D  # Cambiado a Area2D
 
 @export var speed: float = 100.0
 var direction: Vector2
+var destroy_s : AudioStreamPlayer2D
 
 func _ready():
+	destroy_s = $Destroy
 	add_to_group("asteroides")
 	$spr_asteroid.connect("animation_finished", Callable(self, "_on_animation_finished"))
 	$spr_asteroid.play("existir")
@@ -21,7 +23,8 @@ func _process(delta):
 			area.queue_free()  # Destruye el proyectil
 
 func play_explosion_animation():
-	$spr_asteroid.play("explotar")  # Reproduce la animación de explosión
+	$spr_asteroid.play("explotar")
+	destroy_s.play()  # Reproduce la animación de explosión
 
 func _on_animation_finished():
 	queue_free()  # Destruye el asteroide después de la animación

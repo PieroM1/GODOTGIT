@@ -506,7 +506,7 @@ position = Vector2(939, 643)
 scale = Vector2(2.54687, 2.25)
 sprite_frames = SubResource("SpriteFrames_40i33")
 animation = &"existir"
-frame_progress = 0.274957
+frame_progress = 0.831
 
 [node name="planeta2" type="AnimatedSprite2D" parent="Node2D"]
 texture_filter = 1

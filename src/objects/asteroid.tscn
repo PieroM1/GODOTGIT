@@ -1,8 +1,9 @@
-[gd_scene load_steps=35 format=3 uid="uid://d8jel7c03koo"]
+[gd_scene load_steps=36 format=3 uid="uid://d8jel7c03koo"]
 
 [ext_resource type="Script" path="res://src/objects/asteroid.gd" id="1_n4x7x"]
 [ext_resource type="Texture2D" uid="uid://1s2lnrqt1i21" path="res://assets/art/Asteroid/asteroide-Sheet.png" id="2_ca081"]
 [ext_resource type="Texture2D" uid="uid://dsy8tdi3yhl3n" path="res://assets/art/Asteroid/explosion_asteroidep.png" id="3_ty6e2"]
+[ext_resource type="AudioStream" uid="uid://bdag5kfydt04f" path="res://assets/audio/SFX/SFX_Asteroide_Derrivo.wav" id="4_57wbl"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0lirr"]
 atlas = ExtResource("2_ca081")
@@ -235,5 +236,9 @@ animation = &"existir"
 
 [node name="CollisionPolygon2D" type="CollisionShape2D" parent="." groups=["damaged_object"]]
 shape = SubResource("CircleShape2D_lra6o")
+
+[node name="Destroy" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_57wbl")
+volume_db = 10.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
