@@ -28,5 +28,4 @@ func update_timer_label():
 
 func _on_timer_timeout():
 	print("Intentando reproducir sonido")  # Verifica que se llame a esta función
-	you_win_s.play()  # Reproduce el sonido cuando el temporizador se agote
 	print("El sonido se ha reproducido.")

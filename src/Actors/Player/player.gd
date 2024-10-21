@@ -63,21 +63,21 @@ func _on_body_entered(area):
 		match life:
 			3:
 				daño_s.play()
-				await play_mid_life()  # Espera a que termine la animación
 				life = life-1
+				await play_mid_life()  # Espera a que termine la animación
 				invulnerabilidad = true
 				$Invulnerabilidad.start()
 			2:
 				daño_s.play()
-				await play_low_life()
 				life = life-1
+				await play_low_life()
 				invulnerabilidad = true
 				$Invulnerabilidad.start()
 			1:
 				muerte_s.play()
 				life = life-1
 				await play_dead()
-				life = life-1
+				$RegresoMenu.start()
 				invulnerabilidad = true
 				$Invulnerabilidad.start()
 
@@ -101,3 +101,7 @@ func _on_invulnerabilidad_timeout():
 
 func get_life():
 	return life
+
+
+func _on_regreso_menu_timeout():
+	get_tree().change_scene_to_file("res://src/MainGame/Menu/menu.tscn")
