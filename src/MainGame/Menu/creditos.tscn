@@ -1,0 +1,140 @@
+[gd_scene load_steps=5 format=3 uid="uid://c2dyujo00jw4o"]
+
+[ext_resource type="Script" path="res://src/MainGame/Menu/creditos.gd" id="1_6pgpq"]
+[ext_resource type="Texture2D" uid="uid://nw7aklhtbk81" path="res://assets/art/Menu/Creditos.png" id="1_ixl2j"]
+[ext_resource type="Texture2D" uid="uid://ut8mb15o5rtg" path="res://assets/art/Menu/titulopng.png" id="2_1uuow"]
+[ext_resource type="FontFile" uid="uid://clgs54ddns2in" path="res://assets/theme/Font/8-bit Arcade In.ttf" id="3_0ppcb"]
+
+[node name="Creditos" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6pgpq")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_ixl2j")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -310.5
+offset_top = 8.0
+offset_right = -150.5
+offset_bottom = 78.0
+grow_horizontal = 2
+scale = Vector2(3.85667, 3.08628)
+texture = ExtResource("2_1uuow")
+
+[node name="Programadores" type="Label" parent="."]
+offset_left = 64.0
+offset_top = 288.0
+offset_right = 401.0
+offset_bottom = 355.0
+theme_override_fonts/font = ExtResource("3_0ppcb")
+theme_override_font_sizes/font_size = 50
+text = "Programadores:"
+
+[node name="Dovamul" type="Label" parent="."]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 408.0
+offset_right = 495.0
+offset_bottom = 442.0
+theme_override_fonts/font = ExtResource("3_0ppcb")
+theme_override_font_sizes/font_size = 50
+text = "Dovamul"
+
+[node name="Pierix" type="Label" parent="."]
+offset_left = 832.0
+offset_top = 408.0
+offset_right = 958.0
+offset_bottom = 442.0
+theme_override_fonts/font = ExtResource("3_0ppcb")
+theme_override_font_sizes/font_size = 50
+text = "Pierix"
+
+[node name="Artistas" type="Label" parent="."]
+offset_left = 72.0
+offset_top = 480.0
+offset_right = 331.0
+offset_bottom = 547.0
+theme_override_fonts/font = ExtResource("3_0ppcb")
+theme_override_font_sizes/font_size = 50
+text = "Artistas:"
+
+[node name="Crazy_Witch" type="Label" parent="."]
+offset_left = 256.0
+offset_top = 547.0
+offset_right = 515.0
+offset_bottom = 614.0
+theme_override_fonts/font = ExtResource("3_0ppcb")
+theme_override_font_sizes/font_size = 50
+text = "crazy_witch"
+
+[node name="Zu_LaGataNegra" type="Label" parent="."]
+offset_left = 680.0
+offset_top = 547.0
+offset_right = 1026.0
+offset_bottom = 614.0
+theme_override_fonts/font = ExtResource("3_0ppcb")
+theme_override_font_sizes/font_size = 50
+text = "Zu_LaGataNegra"
+
+[node name="Musica y efectos" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -654.5
+offset_top = 242.0
+offset_right = -109.5
+offset_bottom = 313.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_0ppcb")
+theme_override_font_sizes/font_size = 50
+text = "Musica y efectos:"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -254.5
+offset_top = 330.0
+offset_right = 290.5
+offset_bottom = 401.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_0ppcb")
+theme_override_font_sizes/font_size = 50
+text = "Anthony Rumiche Yactayo"
+horizontal_alignment = 1
+
+[node name="Back" type="Button" parent="."]
+offset_left = 64.0
+offset_top = 80.0
+offset_right = 247.0
+offset_bottom = 135.0
+theme_override_fonts/font = ExtResource("3_0ppcb")
+theme_override_font_sizes/font_size = 70
+text = "ATRAS"
+
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

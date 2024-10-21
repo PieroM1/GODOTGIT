@@ -1,0 +1,88 @@
+[gd_scene load_steps=5 format=3 uid="uid://bv6xy2lmef5sx"]
+
+[ext_resource type="Texture2D" uid="uid://j7qxa605tlla" path="res://assets/art/Menu/mainmenu.png" id="1_3y1cj"]
+[ext_resource type="Script" path="res://src/MainGame/Menu/menu.gd" id="1_qgt17"]
+[ext_resource type="FontFile" uid="uid://clgs54ddns2in" path="res://assets/theme/Font/8-bit Arcade In.ttf" id="2_ok663"]
+[ext_resource type="Texture2D" uid="uid://ut8mb15o5rtg" path="res://assets/art/Menu/titulopng.png" id="3_42w1p"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qgt17")
+metadata/_edit_horizontal_guides_ = [-290.0]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.568627, 0.568627, 0.568627, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_3y1cj")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 115.0
+offset_top = 100.0
+offset_right = 386.0
+offset_bottom = 291.0
+grow_vertical = 2
+theme_override_constants/separation = 13
+
+[node name="Play" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ok663")
+theme_override_font_sizes/font_size = 70
+text = "JUGAR"
+
+[node name="Instructions" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ok663")
+theme_override_font_sizes/font_size = 70
+text = "Instrucciones"
+
+[node name="Creditos" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ok663")
+theme_override_font_sizes/font_size = 70
+text = "CREDITOS"
+
+[node name="Quit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ok663")
+theme_override_font_sizes/font_size = 70
+text = "SALIR"
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -619.0
+offset_right = -459.0
+offset_bottom = 70.0
+grow_horizontal = 0
+scale = Vector2(3.85667, 3.08628)
+texture = ExtResource("3_42w1p")
+
+[connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/Instructions" to="." method="_on_instructions_pressed"]
+[connection signal="pressed" from="VBoxContainer/Creditos" to="." method="_on_creditos_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
