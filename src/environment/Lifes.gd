@@ -13,4 +13,5 @@ func _play_lose_life():
 	_on_animation_finished()
 
 func _on_animation_finished():
+	await $ani_spr_life.animation_finished
 	self.visible = false
