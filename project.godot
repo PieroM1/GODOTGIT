@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="GameJam"
+run/main_scene="res://src/MainGame/Menu/menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+AudioMenu="*res://src/MainGame/Global/audio_menu.tscn"
 
 [display]
 

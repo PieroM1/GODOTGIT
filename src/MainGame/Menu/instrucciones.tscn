@@ -1,0 +1,103 @@
+[gd_scene load_steps=6 format=3 uid="uid://dlii68qxcp6em"]
+
+[ext_resource type="Script" path="res://src/MainGame/Menu/instrucciones.gd" id="1_oeogc"]
+[ext_resource type="Texture2D" uid="uid://nw7aklhtbk81" path="res://assets/art/Menu/Creditos.png" id="1_t14lo"]
+[ext_resource type="FontFile" uid="uid://clgs54ddns2in" path="res://assets/theme/Font/8-bit Arcade In.ttf" id="2_yva17"]
+[ext_resource type="Texture2D" uid="uid://bde2fit36qb3l" path="res://assets/art/Controls/WASD.png" id="3_p8c7v"]
+[ext_resource type="Texture2D" uid="uid://chi5dwkye71b1" path="res://assets/art/Controls/Mouse1.png" id="4_qe5xm"]
+
+[node name="Instrucciones" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_oeogc")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_t14lo")
+expand_mode = 1
+
+[node name="Back" type="Button" parent="."]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 72.0
+offset_right = 247.0
+offset_bottom = 127.0
+theme_override_fonts/font = ExtResource("2_yva17")
+theme_override_font_sizes/font_size = 70
+text = "ATRAS"
+
+[node name="Label4" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -454.5
+offset_top = -158.0
+offset_right = 90.5
+offset_bottom = -87.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_yva17")
+theme_override_font_sizes/font_size = 70
+text = "Te mueves con"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Wasd" type="Sprite2D" parent="."]
+position = Vector2(904, 296)
+texture = ExtResource("3_p8c7v")
+
+[node name="Mouse1" type="Sprite2D" parent="."]
+position = Vector2(904, 584)
+texture = ExtResource("4_qe5xm")
+
+[node name="Label5" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -438.5
+offset_top = 26.0
+offset_right = 106.5
+offset_bottom = 97.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_yva17")
+theme_override_font_sizes/font_size = 70
+text = "Apuntas con"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label6" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -422.5
+offset_top = 218.0
+offset_right = 122.5
+offset_bottom = 289.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_yva17")
+theme_override_font_sizes/font_size = 70
+text = "Disparas con"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

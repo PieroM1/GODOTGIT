@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bupxjrqc6ogql" path="res://src/Actors/Player/player.tscn" id="3_hywrj"]
 [ext_resource type="Script" path="res://src/environment/Camera2D2.gd" id="4_qclss"]
 [ext_resource type="PackedScene" uid="uid://djso8as1hbngn" path="res://src/environment/stages_lifes.tscn" id="5_gbvov"]
-[ext_resource type="AudioStream" uid="uid://dg86kri8xuf2u" path="res://assets/audio/SFX/SFX_You_Win.wav" id="7_y6bpl"]
+[ext_resource type="FontFile" uid="uid://clgs54ddns2in" path="res://assets/theme/Font/8-bit Arcade In.ttf" id="6_1400o"]
 
 [node name="Level1" type="Node2D"]
 script = ExtResource("1_j2haa")
@@ -33,14 +33,8 @@ offset_left = 90.1055
 offset_top = -173.714
 offset_right = 130.106
 offset_bottom = -150.714
+theme_override_fonts/font = ExtResource("6_1400o")
 
 [node name="stages_lifes" parent="Camera2D2" instance=ExtResource("5_gbvov")]
 position = Vector2(-133.172, -177.49)
 scale = Vector2(0.209062, 0.419599)
-
-[node name="YouWin" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("7_y6bpl")
-
-[node name="Timer" type="Timer" parent="."]
-
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

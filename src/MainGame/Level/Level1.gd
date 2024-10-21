@@ -5,6 +5,7 @@ var timer_label: Label  # Asume que el Label se llama "Label"
 @onready var you_win_s = AudioStreamPlayer2D
 
 func _ready():
+	AudioMenu.stop_menu_music()
 	timer_label = $Camera2D2/Tiempo
 	you_win_s = $YouWin
 	timer_label.text = "00:00"  # Inicializa el Label en 00:00
@@ -27,5 +28,4 @@ func update_timer_label():
 
 func _on_timer_timeout():
 	print("Intentando reproducir sonido")  # Verifica que se llame a esta función
-	you_win_s.play()  # Reproduce el sonido cuando el temporizador se agote
 	print("El sonido se ha reproducido.")
