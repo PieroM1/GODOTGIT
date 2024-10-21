@@ -397,8 +397,6 @@ position = Vector2(-2, 0)
 rotation = 1.5708
 sprite_frames = SubResource("SpriteFrames_m5j4e")
 animation = &"dead"
-frame = 21
-frame_progress = 1.0
 
 [node name="Area2D" type="Area2D" parent="."]
 
