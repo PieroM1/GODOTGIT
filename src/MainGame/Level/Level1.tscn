@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://b6e4ycx3gm6nc"]
+[gd_scene load_steps=8 format=3 uid="uid://b6e4ycx3gm6nc"]
 
 [ext_resource type="Script" path="res://src/MainGame/Level/Level1.gd" id="1_j2haa"]
 [ext_resource type="PackedScene" uid="uid://d2thfci5jthhr" path="res://src/environment/enviornment.tscn" id="1_y7j83"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bupxjrqc6ogql" path="res://src/Actors/Player/player.tscn" id="3_hywrj"]
 [ext_resource type="Script" path="res://src/environment/Camera2D2.gd" id="4_qclss"]
 [ext_resource type="PackedScene" uid="uid://djso8as1hbngn" path="res://src/environment/stages_lifes.tscn" id="5_gbvov"]
+[ext_resource type="AudioStream" uid="uid://dg86kri8xuf2u" path="res://assets/audio/SFX/SFX_You_Win.wav" id="7_y6bpl"]
 
 [node name="Level1" type="Node2D"]
 script = ExtResource("1_j2haa")
@@ -36,3 +37,10 @@ offset_bottom = -150.714
 [node name="stages_lifes" parent="Camera2D2" instance=ExtResource("5_gbvov")]
 position = Vector2(-133.172, -177.49)
 scale = Vector2(0.209062, 0.419599)
+
+[node name="YouWin" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_y6bpl")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
