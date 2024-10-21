@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cl8eye008w7lk"
+path="res://.godot/imported/SFX_Asteroide_ImpactoNave (1).wav-58dcdc3819bc7527e9fbff98d4bb8770.sample"
+
+[deps]
+
+source_file="res://assets/audio/SFX/SFX_Asteroide_ImpactoNave (1).wav"
+dest_files=["res://.godot/imported/SFX_Asteroide_ImpactoNave (1).wav-58dcdc3819bc7527e9fbff98d4bb8770.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

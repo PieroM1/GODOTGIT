@@ -6,10 +6,15 @@ extends CharacterBody2D
 
 var canShoot: bool = true
 var life: int = 3
-
+var shoot_s = AudioStreamPlayer2D
+var muerte_s = AudioStreamPlayer2D
+var daño_s = AudioStreamPlayer2D
 var invulnerabilidad:bool = false
 
 func _ready():
+	shoot_s = $Shoot
+	muerte_s = $Muerte
+	daño_s = $Daño
 	add_to_group("player")
 	$animation_damage.connect("animation_finished", Callable(self, "_on_animation_finished"))
 	$Area2D.connect("area_entered", Callable(self, "_on_body_entered"))
@@ -44,6 +49,7 @@ func shoot(delta):
 		newlaser.global_position = $Spawn_Laser.global_position
 		newlaser.direction = (get_global_mouse_position() - $Spawn_Laser.global_position).normalized()
 		newlaser.rotation_degrees = rotation_degrees
+		shoot_s.play()
 		get_parent().add_child(newlaser)
 
 func _on_timer_timeout():
@@ -56,16 +62,19 @@ func _on_body_entered(area):
 	if area.is_in_group("asteroides") and invulnerabilidad == false:
 		match life:
 			3:
+				daño_s.play()
 				await play_mid_life()  # Espera a que termine la animación
 				life = life-1
 				invulnerabilidad = true
 				$Invulnerabilidad.start()
 			2:
+				daño_s.play()
 				await play_low_life()
 				life = life-1
 				invulnerabilidad = true
 				$Invulnerabilidad.start()
 			1:
+				muerte_s.play()
 				life = life-1
 				await play_dead()
 				life = life-1
