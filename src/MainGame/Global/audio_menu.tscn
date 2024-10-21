@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://wax3s6pdgogu"]
+
+[ext_resource type="Script" path="res://src/MainGame/Global/audio_menu.gd" id="1_ewtwi"]
+
+[node name="AudioMenu" type="AudioStreamPlayer"]
+script = ExtResource("1_ewtwi")

@@ -26,6 +26,7 @@ texture = ExtResource("1_t14lo")
 expand_mode = 1
 
 [node name="Back" type="Button" parent="."]
+layout_mode = 0
 offset_left = 64.0
 offset_top = 72.0
 offset_right = 247.0

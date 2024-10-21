@@ -38,6 +38,7 @@ scale = Vector2(3.85667, 3.08628)
 texture = ExtResource("2_1uuow")
 
 [node name="Programadores" type="Label" parent="."]
+layout_mode = 0
 offset_left = 64.0
 offset_top = 288.0
 offset_right = 401.0
@@ -57,6 +58,7 @@ theme_override_font_sizes/font_size = 50
 text = "Dovamul"
 
 [node name="Pierix" type="Label" parent="."]
+layout_mode = 0
 offset_left = 832.0
 offset_top = 408.0
 offset_right = 958.0
@@ -66,6 +68,7 @@ theme_override_font_sizes/font_size = 50
 text = "Pierix"
 
 [node name="Artistas" type="Label" parent="."]
+layout_mode = 0
 offset_left = 72.0
 offset_top = 480.0
 offset_right = 331.0
@@ -75,6 +78,7 @@ theme_override_font_sizes/font_size = 50
 text = "Artistas:"
 
 [node name="Crazy_Witch" type="Label" parent="."]
+layout_mode = 0
 offset_left = 256.0
 offset_top = 547.0
 offset_right = 515.0
@@ -84,6 +88,7 @@ theme_override_font_sizes/font_size = 50
 text = "crazy_witch"
 
 [node name="Zu_LaGataNegra" type="Label" parent="."]
+layout_mode = 0
 offset_left = 680.0
 offset_top = 547.0
 offset_right = 1026.0
@@ -129,6 +134,7 @@ text = "Anthony Rumiche Yactayo"
 horizontal_alignment = 1
 
 [node name="Back" type="Button" parent="."]
+layout_mode = 0
 offset_left = 64.0
 offset_top = 80.0
 offset_right = 247.0

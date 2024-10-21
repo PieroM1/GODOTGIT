@@ -4,6 +4,7 @@ var timer: float = 0.0  # Variable para almacenar el tiempo transcurrido
 var timer_label: Label  # Asume que el Label se llama "Label"
 
 func _ready():
+	AudioMenu.stop_menu_music()
 	timer_label = $Camera2D2/Tiempo
 	timer_label.text = "00:00"  # Inicializa el Label en 00:00
 
