@@ -376,7 +376,7 @@ animations = [{
 }]
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
-position = Vector2(640, 431)
+position = Vector2(628, 428)
 collision_mask = 9
 script = ExtResource("1_4vibd")
 laser = ExtResource("2_ffqo7")

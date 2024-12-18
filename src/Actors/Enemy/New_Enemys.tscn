@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://bqxo1gldq8qvi"]
+
+[ext_resource type="Texture2D" uid="uid://l31rh2xhxujt" path="res://assets/art/Enemy/enemywithlaser1.png" id="1_jwfy5"]
+[ext_resource type="Script" path="res://src/Actors/Enemy/new_enemys.gd" id="1_yrwlc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ysbx"]
+atlas = ExtResource("1_jwfy5")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_clv3n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ysbx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aw4ow"]
+size = Vector2(24, 58)
+
+[node name="NewEnemy" type="CharacterBody2D"]
+position = Vector2(37, 34)
+script = ExtResource("1_yrwlc")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_clv3n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_aw4ow")
