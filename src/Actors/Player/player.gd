@@ -59,7 +59,7 @@ func die():
 	print("TE Moriste ")
 
 func _on_body_entered(area): 
-	if area.is_in_group("asteroides") and invulnerabilidad == false:
+	if area.is_in_group("asteroides") or area.is_in_group("enemigos") and invulnerabilidad == false:
 		match life:
 			3:
 				daño_s.play()
@@ -67,12 +67,14 @@ func _on_body_entered(area):
 				await play_mid_life()  # Espera a que termine la animación
 				invulnerabilidad = true
 				$Invulnerabilidad.start()
+				area.queue_free()
 			2:
 				daño_s.play()
 				life = life-1
 				await play_low_life()
 				invulnerabilidad = true
 				$Invulnerabilidad.start()
+				area.queue_free()
 			1:
 				muerte_s.play()
 				life = life-1
@@ -80,6 +82,7 @@ func _on_body_entered(area):
 				$RegresoMenu.start()
 				invulnerabilidad = true
 				$Invulnerabilidad.start()
+				area.queue_free()
 
 func play_mid_life():
 	$animation_damage.play("mid_life")  # Reproduce la animación de daño

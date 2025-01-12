@@ -9,7 +9,7 @@ func _ready():
 	$CollisionShape2D.connect("area_entered", Callable(self, "_on_body_entered"))  # Usando Callable correctamente
 
 func _on_body_entered(area):
-	if area.is_in_group("asteroids"):  # Asegúrate de que los asteroides estén en este grupo
+	if area.is_in_group("asteroids") or area.is_in_group("enemigos"):  # Asegúrate de que los asteroides estén en este grupo
 		area.play_explosion_animation()  # Llama al método de explosión del asteroide
 		queue_free()  # Destruye el proyectil
 
